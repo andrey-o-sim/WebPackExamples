@@ -1,0 +1,6 @@
+{
+    "presets": [
+        "babel-preset-env", // данный preset переводит ES6 в ES5
+        "react" // данный preset переводит jsx в ES5. Он также указыается в package.json как babel-preset-react
+    ]
+}

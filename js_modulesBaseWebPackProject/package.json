@@ -1,0 +1,25 @@
+{
+  "name": "js_modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^1.1.11",
+    "webpack": "^2.2.0-rc.0"
+  },
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "image-webpack-loader": "^4.2.0",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1"
+  }
+}
