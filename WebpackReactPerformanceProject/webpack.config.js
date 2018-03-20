@@ -50,6 +50,14 @@ module.exports = {
     //также данный плагин решает проблему с добавлением имен с хешами js файлов, так как при построении нового bundle мы задаем ему новый хещь, данный плагин берет актуальное имя и задает его в теге script
     new HtmlWebPackPlugin({
       template: 'src/index.html'
+    }),
+    //когда reactJs запускается он смотрит на window scope переменную process.env.NODE_ENV
+    //если он находит данную переменную и она равна production, то его поведение немного меняется, он уберет лишние операции, которые выжны для development environment но не нужны для продакшина
+    //чтобы установить переменную process.env.NODE_ENV нам нужно поспользоваться webpack.DefinePlugin
+    //данный плагин используется для того, чтобы задать window scope переменные и происходит это в bundle.js файле
+    //
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ]
 };
